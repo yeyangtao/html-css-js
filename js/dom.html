@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1px" width="200px" id="ta">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr id="tr">
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+    <button onclick="add()">新增</button>
+    <button onclick="del()">删除</button>
+    <button onclick="delTwo()">删除第三行</button>
+
+    <script>
+        function add() {
+            var ta = document.getElementById("ta");
+            var tr = document.createElement("tr");
+            tr.innerHTML = "<td>8</td><td>8</td>";
+            ta.appendChild(tr);
+        }
+        function delTwo() {
+            var tr = document.getElementById("tr");
+            tr.remove();
+        }
+        function del() {
+           var ta = document.getElementById("ta");
+           // ta.removeChild(0);
+            var tr = document.getElementsByTagName("tr");
+            var i = 0;
+            ta.removeChild(tr[i]);
+            i++;
+            
+           // var i = 0;
+            //ta.removeChild(tr[i]);
+           // i++;
+
+           /*
+           console.log(ta.children[0]);
+           ta.removeChild(ta.children[0]);
+           */
+
+           
+
+        }   
+    </script>
+</body>
+
+</html>

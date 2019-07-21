@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="sheng" onchange="function1()">
+        <option>请选择</option>
+        <option>福建</option>
+        <option>河南</option>
+    </select>
+    <select id="shi" onchange="fun2()">
+
+    </select>
+    <select id="qu">
+
+    </select>
+    <script>
+        function fun1() {
+
+            var sheng = document.getElementById("sheng");
+            var shi = document.getElementById("shi");
+
+
+            if (sheng.value == "福建") {
+                shi.innerHTML = " <option>请选择</option>  <option>厦门</option><option>福州</option>";
+            }
+            if (sheng.value == "河南") {
+                shi.innerHTML = " <option>请选择</option>  <option>信阳</option><option>郑州</option>";
+            }
+        }
+        function fun2() {
+            var shi = document.getElementById("shi");
+            var qu = document.getElementById("qu");
+            if (shi.value == "福州") {
+                qu.innerHTML = "<option>请选择</option>  <option>1区</option><option>2区</option>";
+            }
+        }
+
+        function function1() {
+            var shengs = {
+                "福建": ["厦门", "福州"],
+                "河南": ["信阳", "郑州"]
+            };
+             var sheng = document.getElementById("sheng");
+             var shi = document.getElementById("shi");
+            
+            var cs = shengs[sheng.value];
+            //alert(cs);
+            var str = "";
+            for (var i = 0; i < cs.length; i++) {
+                str += "<option>"+ cs[i] + "</option>";
+            }
+            //alert(str);
+            
+            shi.innerHTML = str;
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

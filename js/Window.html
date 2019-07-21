@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function clo(){
+        var b = confirm("确定退出吗？");
+ if(b){
+     baidu.close();
+ }
+
+    }
+
+
+ function op(){
+     baidu = open("https://www.baidu.com/");
+ }
+
+</script>
+<body>
+    <button onclick="history.forward();">下一个页面</button>
+    <button onclick="history.back();">上一个页面</button>
+    <button onclick="location.reload();">刷新</button>
+    <button onclick="op()">打开百度</button>
+    <button onclick="clo()">关闭百度</button>
+</body>
+</html>

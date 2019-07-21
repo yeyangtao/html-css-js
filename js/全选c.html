@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+window.onload=function(){
+var arr=document.getElementsByName("a");
+//全选
+var btn=document.getElementsByName("b")[0];
+btn.onclick=function(){
+for(var i=0; i<arr.length; i++){
+arr[i].checked=this.checked;
+}
+}
+//反选
+var btn2=document.getElementsByName("c")[0];
+btn2.onclick=function(){
+for(var i=0; i<arr.length; i++){
+arr[i].checked = !arr[i].checked;
+}
+}
+//取出所选值
+var btn3=document.getElementsByName("d")[0];
+btn3.onclick=function(){
+var str="";
+for(var i=0; i<arr.length; i++){
+if( arr[i].checked ){
+str+=arr[i].value+"; "
+}
+}
+alert(str);
+}
+/*
+!指取反，返回布尔类型
+*/
+}
+</script>
+</head>
+<body>
+
+<input type="checkbox" name="a" value="1" />1
+<input type="checkbox" name="a" value="2" />2
+<input type="checkbox" name="a" value="3" />3
+<input type="checkbox" name="a" value="4" />4
+
+
+<br>
+<input type="checkbox" name="b" />全选
+<br>
+<input type="button" name="c" value="反选" />
+<br>
+<input type="button" name="d" value="取出所选值" />
+
+</body>
+</html>

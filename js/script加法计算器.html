@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>加法计算器</title>
+ <script>
+
+ function get(){
+var value1 = document.getElementById("num1").value;
+var value2 = document.getElementById("num2").value;
+var res=parseInt(value1)+parseInt(value2);
+
+document.getElementById("result").value=res;
+}
+ </script>
+</head>
+<body>
+
+
+
+<input type="text" id="num1">
++
+<input type="text" id="num2">
+=
+<input type="text" id=result>
+<input type="button" value="运算" onclick="get()">
+
+
+
+
+
+
+</boay>
+</html>

@@ -1,0 +1,32 @@
+<script>
+var i=setInterval(time,1000);//在1s后执行time函数，且隔一秒就执行一次
+
+function time(){
+var d = new Date();
+var h=d.getHours();
+var m = d.getMinutes();
+var s = d.getSeconds();
+//document.write(h+":"+m+":"+s);
+//document.write(d);
+document.getElementById("time").innerHTML=h+":"+m+":"+s;
+if(s%5==0)
+ clearInterval(i);//关闭重复
+}
+function showTime1(){
+setTimeout(time,3000);//在3s后执行time函数，且只执行一次
+}
+
+function showTime2(){
+
+var i=setInterval(time,1000);//在1s后执行time函数，且隔一秒就执行一次
+
+}
+
+
+
+
+</script>
+<div id="time"></div>
+<button onclick="showTime1()">点击后3s后显示时间</button>
+<button onclick="showTime2()">点击后隔1s显示一次时间</button>
+

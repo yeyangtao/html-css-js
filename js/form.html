@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function validateName(th) {
+        b1 = false;
+        if (th.value.length > 5) {
+            document.getElementById("error1").innerHTML = "用户名太长";
+            document.getElementById("error1").style.color = "red";
+
+        }
+        else {
+            document.getElementById("error1").innerHTML = "";
+            b1 = true;
+        }
+    }
+    function validatePasswd() {
+        b2 = false;
+        
+        var passwd1 = document.getElementById("passwd1").value;
+        var passwd2 = document.getElementById("passwd2").value;
+        if (passwd1 == passwd2) {
+            b2 = true;
+            document.getElementById("error2").innerHTML = "";
+        }
+        else {
+            document.getElementById("error2").innerHTML = "两次密码不一致";
+            document.getElementById("error2").style.color = "red";
+
+        }
+ 
+
+    }
+    function validate() {
+
+        if (b1&&b2) {
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
+    function wel() {
+        if (b1&&b2) {
+            alert("注册成功");
+        }
+        else {
+            alert("注册失败");
+        }
+    }
+
+</script>
+
+<body>
+    <form onsubmit="return validate()">
+        用户名:<input onblur="validateName(this)"> <span id="error1"></span><br>
+        密码:<input id="passwd1"><br>
+        再次输入:<input id="passwd2" onblur="validatePasswd()"> <span id="error2"></span><br>
+        <input type="submit" value="提交" onclick="wel()">
+    </form>
+</body>
+
+</html>

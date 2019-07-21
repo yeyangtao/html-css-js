@@ -1,0 +1,22 @@
+
+h1{
+    font-size: 50px;
+    color: gold;
+    
+    }
+div{
+    color: brown;
+}
+#a{
+  color: darkolivegreen;
+}
+.b{
+    color: darkorange
+}
+div span{
+    color: deeppink;
+}
+div.c{
+    color: darkblue;
+}
+

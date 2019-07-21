@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var t = 0;
+    var l = 0;
+    function fun(){
+        t = t+100;
+        var d = document.getElementById("div");
+        d.style.backgroundColor = "rgb(" + Math.floor(Math.random()*256) + "," + Math.floor(Math.random()*256) + "," + Math.floor(Math.random()*256) + ")";
+
+        d.style.top = t+"px";
+        if(t>900){
+            t = 0;
+            l = l+100;
+            d.style.left = l+"px";
+            
+        }
+       
+    }
+
+    setInterval(fun,400);
+   
+
+</script>
+<body>
+    <div id = "div" style="height:100px;width:100px;position: relative;"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+  <head>
+   <script>
+function login(){
+ var a=document.getElementById("a");
+var b=document.getElementById("b");
+var r = document.getElementById("result");
+if(a.value !=null&&b.value=="admin") 
+  {
+   alert("登录成功");
+   r.innerHTML="欢迎"+a.value+"登录";}
+
+else 
+   {
+   alert("登录失败");
+   
+   r.innerHTML="请重新输入密码";
+   r.style.color = "red";
+   }
+}
+</script>
+  </head>
+<body>
+账号<input type="text" id="a">
+<br>
+密码<input type="password" id="b" >
+<button onclick="login()">验证</button>
+<br>
+<span id="result"></span>
+</body>
+</html>

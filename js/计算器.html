@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function jia(){
+        var a  =  parseFloat(t1.value);
+        var b  = parseFloat(t2.value);
+        
+        return a+b;
+       }
+    function jian(){
+        var a  =  parseFloat(t1.value);
+        var b  = parseFloat(t2.value);
+        return a-b;
+       }
+    function cheng(){
+        var a  =  parseFloat(t1.value);
+        var b  = parseFloat(t2.value);
+        return a*b;
+       }
+    function chu(){
+        var a  =  parseFloat(document.getElementById("t1").value);
+        var b  = parseFloat(document.getElementById("t2").value);
+        if(b==0){
+            alert("除数不为0");
+        }
+        return a/b;
+       }
+    function jisuan(){
+        var m = document.getElementById("mark").value;
+        
+        var result = 0;
+        switch (m) {
+            case "+":result = jia();
+                break;
+            case "-":result = jian();
+                break;
+            case "*":result = cheng();
+                break;
+            case "/":result = chu();
+                break;
+        
+            default:
+                break;
+        }
+      
+        //document.write(result);
+        document.getElementById("result").value = result;
+
+}
+</script>
+<body>
+    <input type = "text" id ="t1">
+    <select id = "mark">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input  type = "text" id = "t2">
+    
+    <button onclick="jisuan()">计算</button>
+    <br>
+    结果：
+    <input type="text" id="result">
+
+</body>
+</html>

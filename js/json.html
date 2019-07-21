@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+var user = {"name":"yyt","age":"21"};
+document.write("姓名"+user.name+"<br>"+"年龄"+user.age);
+var users =[
+    {"name":"yyt","age":"21"},
+    {"name":"tom","age":"22"},
+    {"name":"cat","age":"23"}
+   ]
+   document.write("<br>json数组大小"+users.length);
+   document.write("<br>");
+   document.write("数组第二个元素是"+users[1].name+users[1].age);
+   var userString = JSON.stringify(user);
+   document.write("<br>");
+   document.write("user json转String"+userString);
+</script>
+<body>
+    
+</body>
+</html>

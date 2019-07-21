@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" name="c">1<br>
+    <input type="checkbox" name="c">1<br>
+    <input type="checkbox" name="c">1<br>
+    <input type="checkbox" name="c">1<br>
+    <input type="checkbox" name="c">1<br>
+    <input type="checkbox" name="c">1<br>
+    <input type="checkbox" name="c">1<br>
+    <input type="checkbox" name="c">1<br>
+    <hr>
+    <input type="checkbox" onchange="select1(this)">全选/全不选<br>
+    <input type="checkbox" onclick="fanxuan()">反选<br>
+
+
+    <script>
+        function select1(th) {
+            var cs = document.getElementsByName("c");
+
+            for (var i = 0; i < cs.length; i++) {
+                cs[i].checked = th.checked;
+            }
+        }
+        function fanxuan(){
+            var cs  = document.getElementsByName("c");
+            for (var i = 0; i < cs.length; i++) {
+                cs[i].checked = !cs[i].checked;
+            }
+
+        }
+    </script>
+</body>
+
+
+</html>

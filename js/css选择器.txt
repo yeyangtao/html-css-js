@@ -1,0 +1,67 @@
+元素选择器
+ 
+通过标签名选择元素
+<style>
+p{
+  color:red;
+}
+</style>
+ 
+<p>p元素</p>
+<p>p元素</p>
+<p>p元素</p>
+
+
+
+
+id选择器
+  <style>
+p{
+  color:red;
+}
+#p1{
+  color:blue;
+}
+#p2{
+  color:green;
+}
+</style>
+ 
+<p>没有id的p</p>
+<p id="p1">id=p1的p</p>
+<p id="p2">id=p2的p</p>
+
+
+
+类选择器
+<style>
+.pre{
+  color:blue;
+}
+.after{
+  color:green;
+}
+</style>
+ 
+<p class="pre">前3个</p>
+<p class="pre">前3个</p>
+<p class="pre">前3个</p>
+ 
+<p class="after">后3个</p>
+<p class="after">后3个</p>
+<p class="after">后3个</p>
+
+
+更准确的选择
+  同时根据元素名和class来选择 
+ <style>
+ 
+p.blue{
+  color:blue;
+}
+ 
+</style>
+ 
+<p class="blue">class=blue的p</p>
+ 
+<span class="blue">class=blue的span</span>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function count1(){var str = prompt("请输入一个字符串，我来统计其中a的个数");
+ var count = 0;
+ for(i=0;i<str.length;i++){
+     if(str.charAt(i)=='a'){
+         count ++;
+     }
+     }
+ document.write("a出现的次数:"+count);
+  }
+  function count2(){
+      var str = document.getElementById("t").value;
+      var count = 0;
+ for(i=0;i<str.length;i++){
+     if(str.charAt(i)=='a'){
+         count ++;
+     }
+     }
+ document.write("a出现的次数:"+count+str);
+
+  }
+</script>
+
+<body>
+    <button onclick="count1()">点我统计1</button>
+    <br>
+
+    <input type="text" id="t">
+    <button onclick="count2()">点我统计2</button>
+
+</body>
+</html>

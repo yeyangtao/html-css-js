@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td align="left"><font color="red">*</font>用户名:</td>
+            <td><input type="text" size="30">&nbsp;<font color="red"><strong>用户名不得小于三个字符</strong></font></td>
+        </tr>
+        <tr>
+            <td align="left"><font color="red">*</font>密码:</td>
+            <td><input type="password" size="30"></td>
+        </tr>
+        <tr>
+            <td align="left"><font color="red">*</font>确认密码:</td>
+            <td><input type="password" size="30"></td>
+        </tr>
+        <tr>
+            <td align="left"><font color="red">*</font>真实姓名:</td>
+            <td><input type="text" size="30"></td>
+        </tr>
+        <tr>
+            <td align="left"><font color="red">*</font>性别:</td>
+            <td><select>
+                <option >男</option>
+                <option >女</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="left"><font color="red">*</font>生日:</td>
+            <td>
+                <select name="" id="birthday">
+                    <option value="">1980</option>
+                </select>
+                <select name="" id="month" >
+                    <option>1</option>
+                </select>
+                <select name="" id="day">
+                    <option>1</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="left"><font color="red">*</font>手机:</td>
+            <td><input type="password" size="30"></td>
+        </tr>
+        <tr>
+            <td align="left"><font color="red">*</font>居住地:</td>
+            <td>
+                <select name="" id="">
+                    <option value="">北京</option>
+                </select>
+                <select name="" id="">
+                    <option value="">中南海</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="left"><font color="red">*</font>QQ:</td>
+            <td><input type="text" size="30"><br><span color="blue">设置我的状态</span></td>
+        </tr>
+    </table>
+</body>
+<script>
+    var birthdaySelect = document.getElementById("birthday");
+    for(var i = 1980; i <= 2020; i++) {
+        var op = document.createElement("option");
+        op.appendChild(document.createTextNode(i));
+        birthdaySelect.appendChild(op)
+    }
+    var monthSelect = document.getElementById("month");
+    for (var i = 1;i<=12;i++){
+        var op = document.createElement("option");
+        op.appendChild(document.createTextNode(i));
+        monthSelect.appendChild(op);
+    }
+    var daySelect = document.getElementById("day");
+    for (var i = 1;i<=31;i++){
+        var op = document.createElement("option");
+        op.appendChild(document.createTextNode(i));
+        daySelect.appendChild(op);
+    }
+</script>
+</html>
